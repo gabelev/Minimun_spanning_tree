@@ -39,20 +39,20 @@ if __name__ == "__main__":
 
     infile = open("data.txt", "r")
 
-number_of_cases = int(infile.readline())
-infile.readline()
-for case in range(number_of_cases):
-    number_of_points = int(infile.readline())
-
-    points = []
-    for point in range(number_of_points):
-
-        data = infile.readline().strip('\n').split(" ")
-        point = (float(item) for item in data)
-        points.append(tuple(point))
-
-    answer = Min_Span_Tree(points)
-    print("%.2f" % round(answer, 2))
+    number_of_cases = int(infile.readline())
     infile.readline()
+    for case in range(number_of_cases):
+        number_of_points = int(infile.readline())
 
-infile.close()
+        points = []
+        for point in range(number_of_points):
+
+            data = infile.readline().strip('\n').split(" ")
+            point = (float(item) for item in data)
+            points.append(tuple(point))
+
+        answer = Min_Span_Tree(points)
+        print("%.2f" % round(answer, 2))
+        infile.readline()
+
+    infile.close()
